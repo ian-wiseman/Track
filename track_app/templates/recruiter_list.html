@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% extends "base.html" %}
+    {% load static %}
+    </head>
+    <body>
+    {% block content %}
+    
+    <h2>Recruiters</h2>
+    <form>
+        <div>
+            {{ form.as_p }}
+        </div>
+    </form>
+    {% endblock %}
+    </body>
+</html>
