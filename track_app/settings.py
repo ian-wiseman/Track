@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'track_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MyApp',
+        'NAME': 'TrackApp',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost'
