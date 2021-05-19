@@ -7,15 +7,16 @@
 {% load static %}
 </head>
 <body>
-{% block content %}
+  {% block content %}
 
-<h2>Update a Recruiter Record</h2>
-<form method="post">
-    <div>
-        {{ form.as_p }}
-        <input type="submit" value="Submit" />
-    </div>
-</form>
-{% endblock %}
+  <h2>Update a Recruiter Record</h2>
+    <form method="post">
+    {% csrf_token %} 
+        <div>
+            {{ form.as_p }}
+            <input type="submit" value="Save" />
+        </div>
+    </form>
+  {% endblock %}
 </body>
 </html>
