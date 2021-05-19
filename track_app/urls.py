@@ -24,8 +24,8 @@ urlpatterns = [
     path("recruiter/create", views.RecruiterCreate.as_view(), name="recruitercreate"),
     path("placement/create", views.PlacementCreate.as_view(), name="placementcreate"),
     path("recruiter/create", views.RecruiterCreate.as_view(), name="recruitercreate"),
-    path("owner/update/<pk>", views.PlacementUpdate.as_view(), name="placementupdate"),
+    path("placement/update/<pk>", views.PlacementUpdate.as_view(), name="placementupdate"),
     path("recruiter/update/<pk>", views.RecruiterUpdate.as_view(), name="recruiterupdate"),
-    path("owner/delete/<pk>", views.PlacementDelete.as_view(), name="placementdelete"),
-    path("recruiter/delete/<pk>", views.RecruiterDelete.as_view(), name="recruiterdelete"),
+    path("placement/delete/<pk>", views.PlacementDelete.as_view(), name="placementdelete")
 ]
+
