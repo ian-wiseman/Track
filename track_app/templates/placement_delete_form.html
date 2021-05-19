@@ -12,6 +12,7 @@
     <h2>Delete a Placement</h2>
 
         <form method="post">
+        {% csrf_token %}
             <div>
             <p>Are you sure you want to delete "{{ object }}"?</p>
             <input type="submit" value="Confirm" />
