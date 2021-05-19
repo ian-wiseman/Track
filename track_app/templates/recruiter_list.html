@@ -7,14 +7,26 @@
     {% load static %}
     </head>
     <body>
-    {% block content %}
+    <table>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Position</th>
+              <th>Commission</th>
+            </tr>
+            
+            {% for object in Recruiter %}
+            <tr>
+                <td>{{ object.first_name }}</td>
+                <td>{{ object.last_name }}</td>
+                <td>{{ object.position }}</td>
+                <td>{{ object.commission }}</td>
+            </tr>
+         </table>   
+            
+            {% empty %}
+            <h2>No Recruiters entered yet</h2>
+            {% endfor %}
     
-    <h2>Recruiters</h2>
-    <form>
-        <div>
-            {{ form.as_p }}
-        </div>
-    </form>
-    {% endblock %}
     </body>
 </html>
