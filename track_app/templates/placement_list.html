@@ -7,14 +7,40 @@
     {% load static %}
 </head>
     <body>
-    {% block content %}
+        <table>
+            <tr>
+              <th>Position</th>
+              <th>Company</th>
+              <th>Revenue</th>
+              <th>Client Finder</th>
+              <th>Client Finder Revenue</th>
+              <th>Client Owner</th>
+              <th>Client Owner Revenue</th>
+              <th>Candidate Finder</th>
+              <th>Candidate Finder Revenue</th>
+              <th>Candidate Owner</th>
+              <th>Candidate Owner Revenue</th>
+            </tr>
+            
+            {% for object in Placement %}
+            <tr>
+                <td>{{ object.position_title }}</td>
+                <td>{{ object.company_name }}</td>
+                <td>{{ object.placement_revenue }}</td>
+                <td>{{ object.client_find }}</td>
+                <td>{{ object.client_find_revenue }}</td>
+                <td>{{ object.client_owner }}</td>
+                <td>{{ object.client_owner_revenue }}</td>
+                <td>{{ object.candidate_find }}</td>
+                <td>{{ object.candidate_find_revenue }}</td>
+                <td>{{ object.candidate_owner }}</td>
+                <td>{{ object.candidate_owner_revenue }}</td>
+            </tr>
+         </table>   
+            
+            {% empty %}
+            <h2>No placements yet</h2>
+            {% endfor %}
     
-    <h2>Placements</h2>
-    <form>
-        <div>
-            {{ form.as_p }}
-        </div>
-    </form>
-    {% endblock %}
     </body>
 </html>
