@@ -21,31 +21,28 @@ class RecruiterCreate(CreateView):
   model = Recruiter
   form_class = RecruiterCreateForm
   template_name = "track_app/recruiter_create_form.html"
+  success_url ="/"
 
 class PlacementCreate(CreateView):
   model = Placement
   form_class = PlacementCreateForm
   template_name = "track_app/placement_create_form.html"
-  
+  success_url ="/"
 
 class RecruiterUpdate(UpdateView):
   model = Recruiter
   form_class = RecruiterCreateForm
   template_name = "track_app/recruiter_update_form.html"
+  success_url ="/"
   
 class PlacementUpdate(UpdateView):
   model = Placement
   form_class = PlacementCreateForm
   template_name = "track_app/placement_update_form.html"
-  
-
-"""class RecruiterDelete(DeleteView):
-  model = Recruiter
-  template_name = "track_app/recruiter_delete_form.html"
-  """
+  success_url ="/"
 
 class PlacementDelete(DeleteView):
   model = Placement
-  form_class = PlacementCreateForm
   template_name = "track_app/placement_delete_form.html"
+  success_url ="/"
   
